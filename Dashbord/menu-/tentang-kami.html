@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../public/image/alat/bh-.png">
+    <title> Tentang kami OwnerShop BKMC </title>
+    <meta name="title" content="OwnerShop BKMC">
+    <meta name="description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="OwnerShop BKMC">
+    <meta property="og:description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:image" content="...">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="...">
+    <meta property="twitter:title" content="OwnerShop BKMC">
+    <meta property="twitter:description" content="Website Resmi OwnerShop BKMC baru">
+    <meta property="twitter:image" content="...">
+    <!-- // menu css -->
+    <style type="text/css">
+        *,
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background: #fff;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 40px;
+        }
+        .item {
+            width: 100%;
+            margin: 10px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 90%;
+            height: 90%;
+            border-radius: 20px 20px 20px 20px;
+        }
+        a {
+            font-size: 17px;
+            width: 60%;
+            font-family: 'comic sans ms';
+            font-weight: 700;
+            background: none;
+            color: rgba(0, 0, 0, 0.40);
+            text-align: center;
+            padding: 5px 5px 5px 5px;
+        }
+        .container:nth-child(0),
+        .container:nth-child(1),
+        .container:nth-child(2),
+        .container:nth-child(3),
+        .container:nth-child(4),
+        .container:nth-child(5),
+        .container:nth-child(6) {
+            transform: translateY(50px);
+            filter: blur(30px);
+            opacity: 0;
+            animation: showContent .4s 1s linear 1 forwards;
+        }
+        @keyframes showContent {
+            to {
+                transform: translateY(0px);
+                filter: blur(0px);
+                opacity: 1;
+            }
+        }
+        .container:nth-child(0) {
+            animation-delay: .1s !important;
+        }
+        .container:nth-child(1) {
+            animation-delay: .3s !important;
+        }
+        .container:nth-child(2) {
+            animation-delay: .5s !important;
+        }
+        .container:nth-child(3) {
+            animation-delay: .7s !important;
+        }
+        .container:nth-child(4) {
+            animation-delay: .9s !important;
+        }
+        @media screen and (min-width: 960px) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="padding: 10px; width: 100%;">
+        <a href="../index.html"><img style="border-radius: 15px;" src="../public/image/alat/0y.png" width="30px"
+                height="30px"></a>
+    </div>
+    <div class="container">
+        <div class="item">
+            <img class="image" src="./img-postingan/utama.jpg" alt="1">
+            <a class="a">menu login opsi tidak perlu di isi.</a>
+        </div>
+        <div class="item">
+            <img class="image" src="./img-postingan/btn-navbar.jpg" alt="2">
+            <a class="a">jika anda mencari thema untuk body kelick dibagian tanda garis 3.</a>
+        </div>
+        <div class="item">
+            <img class="image" src="./img-postingan/menu-navbar.jpg" alt="3">
+            <a class="a">lalu anda klick "bottom" yang ada di paling bawah</a>
+        </div>
+        <div class="item">
+            <img class="image" src="./img-postingan/btn-keranjang.jpg" alt="4">
+            <a class="a">anda ingin melihat keranjang klick tanda yang sudah di arahkan</a>
+        </div>
+        <div class="item">
+            <img class="image" src="./img-postingan/menu-iklan.jpg" alt="5">
+            <a class="a">setelah anda sudah di menu. keranjang klick tanda X</a>
+        </div>
+        <div class="item">
+            <img class="image" src="./img-postingan/btn-zoom.jpg" alt="6">
+            <a class="a">anda ingin melihat gambar lebih jelas di bagian gambar anda bisa klick </a>
+        </div>
+    </div>
+</body>
+
+</html>

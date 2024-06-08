@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../public/image/alat/icon-website.png">
+    <title> keranjang OwnerShop BKMC </title>
+    <meta name="title" content="OwnerShop BKMC">
+    <meta name="description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="OwnerShop BKMC">
+    <meta property="og:description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:image" content="...">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="...">
+    <meta property="twitter:title" content="OwnerShop BKMC">
+    <meta property="twitter:description" content="Website Resmi OwnerShop BKMC baru">
+    <meta property="twitter:image" content="...">
+    <!-- // menu css -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style type="text/css">
+        *,
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .container-content {
+            position: fixed;
+        }
+
+        .content-body a {
+            cursor: pointer;
+            width: 100%;
+            background: #ffc800ff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .close1btn {
+            color: #fff;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .content-body {
+            max-height: 100%;
+            overflow: hidden;
+            scroll-behavior: none;
+            position: absolute;
+            position: fixed;
+            width: 70%;
+            height: 40%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 100vh 100vh rgba(0, 0, 0, 0.50);
+            background: #ddd;
+        }
+
+        .container-ls {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-slider {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .container-slider img {
+            width: 100%;
+        }
+
+        .container-ls button {
+            width: 4px;
+            height: 40px;
+            background: #fc5185;
+            border: none;
+        }
+
+        .container-ls h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            font-family: 'comic sans ms';
+        }
+
+        .menu-button {
+            width: 100%;
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-button button {
+            width: 70px;
+            height: 40px;
+            font-size: 0.875em;
+            font-weight: 700;
+            word-wrap: break-word;
+            color: black;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .menu-button button:hover {
+            background: #d63384;
+            color: #fff;
+            border: none;
+            transition-delay: .4s;
+            transition: all .4s ease-in;
+        }
+
+        .menu-button .active {
+            width: 70px;
+            height: 40px;
+            font-size: 0.875em;
+            font-weight: 700;
+            background: #d63384;
+            color: #fff;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-radius: 20px;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+        }
+
+        nav img {
+            width: 20%;
+            height: 20%;
+            cursor: pointer;
+        }
+
+        nav img:hover {
+            opacity: 0.6;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .description h3 {
+            font-family: 'comic sans ms';
+            font-size: 15px;
+            font-weight: bold;
+            padding: 15px 10px 0px 10px;
+        }
+
+        .description p {
+            font-family: 'comic sans ms';
+            padding: 0px 10px;
+            color: rgba(0, 0, 0, 0.70);
+        }
+
+        .row {
+            margin: 10px 16px;
+        }
+
+        /* Add padding BETWEEN each column */
+        .row,
+        .row>.column {
+            padding: 8px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            display: none;
+            /* Hide all elements by default */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Clear floats after the columns */
+
+        /* The expanding image container */
+        .wrappe {
+            position: absolute;
+            border: none;
+        }
+
+        .Zoom {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #expandedImg {
+            width: 100%;
+            height: 150%;
+            border: none;
+        }
+
+        #imgtext {
+            font-size: 0px;
+            color: transparent;
+        }
+
+        .btn2 {
+            color: black;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn2:hover {
+            opacity: 0.6;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-content">
+        <div class="content-body">
+            <a class="close1btn" onclick="this.parentElement.style.display='none'">&times;</a>
+            <img src="../public/image/a6.jpg" alt="content" width="100%" height="100%">
+        </div>
+    </div>
+    <div style="padding: 10px; width: 100%;">
+        <a href="../index.html"><img style="border-radius: 15px;" src="../public/image/alat/0y.png" width="30px"
+                height="30px"></a>
+    </div>
+    <div class="container-slider">
+        <img src="../image/b16.jpg">
+    </div>
+    <div class="container-ls">
+        <button></button><samp style="padding: 0px 5px;"></samp>
+        <h2> Populer Top </h2>
+    </div>
+    <div id="myBtnContainer">
+        <div class="menu-button">
+            <button class="btn active" onclick="filterSelection('all')"> semua </button>
+            <div style="padding: 0px 8px" ;></div>
+            <button class="btn" onclick="filterSelection('kaos')"> baju </button>
+            <div style="padding: 0px 8px" ;></div>
+            <button class="btn" onclick="filterSelection('celana')"> celana </button>
+            <!-- <button class="btn" onclick="filterSelection('people')"> natural </button> -->
+        </div>
+
+    </div>
+    <!-- image public  -->
+    <div class="row">
+        <div class="column kaos">
+            <nav>
+                <img src="./image/f1.jpg" alt="1" onclick="myFunction(this);">
+                <div class="description">
+                    <h3> PAKAIAN ANAK ANAK </h3>
+                    <p> Rp.60.000</p>
+                </div>
+            </nav>
+        </div>
+
+        <br />
+        <div class="column kaos">
+            <nav>
+                <img src="./image/f2.jpg" alt="2" onclick="myFunction(this);">
+                <div class="description">
+                    <h3> PAKAIAN ANAK ANAK </h3>
+                    <p> Rp.60.000</p>
+                </div>
+            </nav>
+        </div>
+
+
+        <br />
+        <div class="column kaos">
+            <nav>
+                <img src="./image/f3.jpg" alt="3" onclick="myFunction(this);">
+                <div class="description">
+                    <h3> PAKAIAN ANAK ANAK </h3>
+                    <p> Rp.60.000</p>
+                </div>
+            </nav>
+        </div>
+
+        <br />
+        <div class="column celana">
+            <nav>
+                <img src="./image/n6.jpg" alt="4" onclick="myFunction(this)">
+                <div class="description">
+                    <h3> CELANA ANAK ANAK </h3>
+                    <p> Rp.35.000</p>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="wrappe">
+        <div class="Zoom"><a class="btn2" onclick="this.parentElement.style.display='none'">&times;</a>
+            <img id="expandedImg">
+            <div id="imgtext"></div>
+        </div>
+    </div>
+    <!-- end image public  -->
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+    <script src="../src/js/main-menu-leader.js"></script>
+    <script src="../src/js/screenshot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon_website" href="./Dashbord/public/image/alat/icon-website.png">
+    <title> OwnerShop BKMC </title>
+    <meta name="title" content="OwnerShop BKMC">
+    <meta name="description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="OwnerShop BKMC">
+    <meta property="og:description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:image" content="...">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="...">
+    <meta property="twitter:title" content="OwnerShop BKMC">
+    <meta property="twitter:description" content="Website Resmi OwnerShop BKMC baru">
+    <meta property="twitter:image" content="...">
+    <!-- // menu css -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style1.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style2.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style3.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style4.css'> -->
+    <style>
+        *,
+        html {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .container-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 500px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+            border-radius: 10px;
+        }
+
+        .container-content:nth-child(1) {
+            filter: blur(20px);
+            opacity: 0;
+            animation: showContent .4s 1s linear 1 forwards;
+        }
+
+        @keyframes showContent {
+            to {
+                filter: blur(0px);
+                opacity: 1;
+            }
+        }
+
+        .container-content:nth-child(2) {
+            animation-delay: .3s !important;
+        }
+
+        .container-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .gif {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+        }
+
+        .container {
+            padding: 0px 0px 50px;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        .efek-ngetik {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 800;
+            font-family: 'comic sans ms';
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+        input {
+            outline: none;
+            padding: 7px 10px 7px 10px;
+            background: #fff;
+            border-radius: 20px;
+            border: none;
+        }
+
+        input:focus,
+        input:not(:placeholder-shown) {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
+        }
+
+        .sontainer-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .sontainer-icon a {
+            text-decoration: none;
+            padding: 0px 5px;
+        }
+
+        .sontainer-icon a img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-content">
+        <div class="container-img"><a href="./Dashbord/index.html"><img
+                    src="./Dashbord/image/GIF_20240310_172124_321.gif" class="gif"></a></div>
+        <div class="container">
+            <span class="efek-ngetik"></span>
+        </div>
+        <div class="container-text">
+            <input placeholder="Nama lengkap" type="text">
+            <br />
+            <input placeholder="Email" type="email">
+            <br />
+            <input placeholder="Password" type="password">
+        </div>
+        <div class="sontainer-icon">
+            <a href="./Dashbord/public/login/google.html"><img src="./Dashbord/public/image/alat/login_google_icon.png"
+                    alt="icon_google"></a>
+            <a href="./Dashbord/public/login/facebook.html"><img src="./Dashbord/public/image/alat/login_facebook_icon.png"></a>
+        </div>
+    </div>
+    <script>
+        // function([string1, string2],target id,[color1,color2])
+        const txtElement = ['wellcome', 'on our shop', 'you can buy', 'our products', 'klic video'];
+        let count = 0;
+        let txtIndex = 0;
+        let currentTxt = '';
+        let words = '';
+
+        (function ngetik() {
+
+            if (count == txtElement.length) {
+                count = 0;
+            }
+
+            currentTxt = txtElement[count];
+
+            words = currentTxt.slice(0, ++txtIndex);
+            document.querySelector('.efek-ngetik').textContent = words;
+
+            if (words.length == currentTxt.length) {
+                count++;
+                txtIndex = 0;
+            }
+
+            setTimeout(ngetik, 190);
+
+        })();
+    </script>
+    <script src="./Dashbord/src/js/screenshot.js"></script>
+</body>
+
+</html>

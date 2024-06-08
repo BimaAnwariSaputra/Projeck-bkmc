@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon_website" href="./public/image/alat/icon-website.png">
+    <title> OwnerShop BKMC </title>
+    <meta name="title" content="OwnerShop BKMC">
+    <meta name="description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="OwnerShop BKMC">
+    <meta property="og:description" content="Website Resmi OwnerShop BKMC Baru">
+    <meta property="og:image" content="...">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="...">
+    <meta property="twitter:title" content="OwnerShop BKMC">
+    <meta property="twitter:description" content="Website Resmi OwnerShop BKMC baru">
+    <meta property="twitter:image" content="...">
+    <!-- // menu css -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style1.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style2.css'>
+    <script src="./src/js/script.js" defer></script>
+</head>
+<body> 
+    <section id="home"></section>
+    <!-- // style #1 Class css -->
+    <nav class="navbar visible">
+        <div class="wrapper">
+            <div class="text-wrapper"><img src=""> OwnerShop </div>
+            <a href="#" class="tombol-menu" title="menu">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </a>
+            <div class="searchBar">
+                <img class="serch" src="./public/image/alat/search.svg" />
+                <input title="Search" maxlength="5" placeholder="Search..." id="searchBar" name="searchBar" type="text" class="textt">
+                <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#"> contack shop </a></li>
+                    <li><a href="#"> Produk </a></li>
+                    <li><a href="#"> Tentang Kami </a></li>
+                    <li><a href="#"> cara berbelanja </a></li>
+                    <li><input type="checkbox" id="toggleButton" class="checkbox" onclick="dark()">
+                        <label for="toggleButton" class="toggle"></label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-list">
+        <img src="./public/image/alat/Gambar WhatsApp 2024.jpg" style="width: 40px; height: 40px; border-radius: 100px; margin-right: 15px;"/>
+        <h3 class="text-list"> Bima Karya Web </h3>
+        <div class="container-waktu">
+            <p><button class="bt nomor" id="demo"></p>
+        </div>
+        <a href="./keranjang/1.html"><img class="keranjang" title="keranjang" src="./public/image/alat/shopping.svg"></a>
+        <div><a class="quantity">New</a></div>
+    </div>
+    <div style="padding: 25px;">
+        <p></p>
+    </div>
+    <div class="cnt">
+        <button class="active-btn" title="all"> All </button>
+        <div style="padding: 10px;"></div><button class="btn name" title="seller">Seller</button>
+        <div style="padding: 10px;"></div><button class="btn name" title="seller">Best</button>
+    </div>
+    <div style="height: 30px;">
+
+    </div>
+    <div class="body">
+        <div id="root"></div>
+    </div>
+    <!-- chat bot otomatis  -->
+    <div id="snackbar"><img src="./public/image/alat/icon_board.png" width="30px" height="30px">
+        <div style="padding: 7px;"></div> Silakan Hubungi Kami!
+    </div>
+    <!-- <button onclick="Cache()">Show Snackbar</button> -->
+    <script>
+        function Cache() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+    <!-- // menu javascript -->
+    <script src="./src/js/java1.js"></script>
+    <script src="./src/js/scroll-navbar.js"></script>
+    <script src="./src/js/main-menu-keranjang.js"></script>
+    <script src="./src/js/main-dark-body.js"></script>
+    <script src="./src/js/screenshot.js"></script>
+</body>
+
+</html>
